@@ -12,8 +12,11 @@ int aMax;
 int aMin;
 }
 // Dimmen mit min./max. Zündwinkel
+void loop(){
+    
+}
 void loop() {
-         if(digitalRead(6,HIGH)){
+         if(digitalRead(9,HIGH)){
             delayMicroseconds(a);
             digitalWrite(3,HIGH);
             delayMicroseconds(10);
