@@ -10,13 +10,12 @@ attachInterrupt(didittalPinToInterrupt(9),loop,CHANGE);
 int a;      // Werte vor Ort festlegen
 int aMax;
 int aMin;
+int i = 0;
 }
 // Dimmen mit min./max. Zündwinkel
-void loop(){
-    
-}
 void loop() {
          if(digitalRead(9,HIGH)){
+            i++;
             delayMicroseconds(a);
             digitalWrite(3,HIGH);
             delayMicroseconds(10);
@@ -30,6 +29,9 @@ void loop() {
         if(digitalRead(1, HIGH) && a< aMax){
             a+=500;
         }
-        
+        else if(i=50){
+            i=0;
+            delay(1000);
+        }
     }
 
