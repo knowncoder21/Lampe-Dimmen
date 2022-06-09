@@ -1,16 +1,18 @@
 BlinkEnde_LED.ino
 
-void setup ( ) { // I n i t i a l i s i e r t Pin 14 (LED1) a l s output .
-pinMode(14,OUTPUT);
+void setup ( ) {
+pinMode(3,OUTPUT);
 pinMode(0,INPUT);
-int i = 0;
+pinMode(6,INPUT);
+int a;
 }
-//Testen des Spannungsnulldurchgangs und Zählen
+//Einstellen eines festen Zündwinkels
 void loop() {
         if(digitalRead(6,HIGH)){
-            digitalWrite(14,HIGH);
+            delay(a);
+            digitalWrite(3,HIGH);
+            delayMicroseconds(10);
+            digitalWrite(3,LOW);
         }
-        delay(8);
-        digitalWrite(14,LOW);
-        i++;
+        
     }
