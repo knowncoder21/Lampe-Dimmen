@@ -3,13 +3,14 @@ BlinkEnde_LED.ino
 void setup ( ) { // I n i t i a l i s i e r t Pin 14 (LED1) a l s output .
 pinMode(14,OUTPUT);
 pinMode(0,INPUT);
+int i = 0;
 }
-//Lampe mit Tasten Ein-/Ausschalten
+//Testen des Spannungsnulldurchgangs und Zählen
 void loop() {
-    if(digitalRead(0, HIGH)){
-        digitalWrite(14, HIGH);
+        if(digitalRead(6,HIGH)){
+            digitalWrite(14,HIGH);
+        }
+        delay(8);
+        digitalWrite(14,LOW);
+        i++;
     }
-    else{
-        digitalWrite(14, LOW);
-    }
-}
