@@ -1,12 +1,14 @@
 BlinkEnde_LED.ino
 
 void setup ( ) {
-pinMode(3,OUTPUT);
+pinMode(1, INPUT);
 pinMode(0,INPUT);
-pinMode(6,INPUT);
-int a;
+pinMode(3,OUTPUT);
+int a;                      //Vor Ort bestimmen
+int aMax;
+int aMin;
 }
-//Einstellen eines festen Zündwinkels
+//Dimmen mithilfe der Taster
 void loop() {
         if(digitalRead(6,HIGH)){
             delay(a);
@@ -14,5 +16,12 @@ void loop() {
             delayMicroseconds(10);
             digitalWrite(3,LOW);
         }
-        
+        if(digitalRead(0,HIGH)){
+            a-=50;
+
+        }
+        if(digitalRead(1, HIGH)){
+            a+=50;
+        }
     }
+
