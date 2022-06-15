@@ -29,7 +29,7 @@ void loop() {
         if(digitalRead(1, HIGH) && a< aMax){
             a+=500;
         }
-        else if(i=50){
+        else if(i=100){                 // Verändert
             i=0;
             delay(1000);
         }
